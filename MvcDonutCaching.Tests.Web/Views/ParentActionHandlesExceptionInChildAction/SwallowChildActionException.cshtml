@@ -1,0 +1,11 @@
+﻿<div>BeforeSwallowingExceptionInAction</div>
+@{
+    try
+    {
+        @Html.Action("ThrowExceptionInAction")
+    }
+    catch(Exception)
+    {
+<div>ISwallowedAnException</div>
+    }
+}<div>AfterSwallowingExceptionInAction</div>

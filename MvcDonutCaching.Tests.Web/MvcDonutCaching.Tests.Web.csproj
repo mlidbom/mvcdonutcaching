@@ -121,6 +121,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\Caching1SecondWithNoChildActionsController.cs" />
+    <Compile Include="Controllers\ParentActionHandlesExceptionInChildActionController.cs" />
     <Compile Include="Controllers\IllegalArgumentsToChildActionController.cs" />
     <Compile Include="Controllers\ProvokeRaceCondition1Controller.cs" />
     <Compile Include="Controllers\ThrowExceptionController.cs" />
@@ -267,6 +268,43 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\IllegalArgumentsToChildAction\ChildActionRequiringParameter.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ParentActionHandlesExceptionInChildAction\Index.cshtml" />
+    <Content Include="Views\ParentActionHandlesExceptionInChildAction\NestedLayoutFooter.cshtml" />
+    <Content Include="Views\ParentActionHandlesExceptionInChildAction\NestedLayoutHeader.cshtml" />
+    <Content Include="Views\ParentActionHandlesExceptionInChildAction\PageBody.cshtml" />
+    <Content Include="Views\ParentActionHandlesExceptionInChildAction\TopLayoutFooter.cshtml" />
+    <Content Include="Views\ParentActionHandlesExceptionInChildAction\TopLayoutHeader.cshtml" />
+    <Content Include="Views\ParentActionHandlesExceptionInChildAction\_NestedLayout.cshtml" />
+    <Content Include="Views\ParentActionHandlesExceptionInChildAction\_TopLayout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ParentActionHandlesExceptionInChildAction\ThrowExceptionInView.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ParentActionHandlesExceptionInChildAction\SwallowChildViewException.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ParentActionHandlesExceptionInChildAction\SwallowChildActionException.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ParentActionHandlesExceptionInChildAction\SomethingWentWrong.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ParentActionHandlesExceptionInChildAction\SwallowExceptions.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ParentActionHandlesExceptionInChildAction\SwallowExceptionInNestedAction.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ParentActionHandlesExceptionInChildAction\SwallowExceptionInNestedView.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ParentActionHandlesExceptionInChildAction\ThrowInNestedChildView.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ParentActionHandlesExceptionInChildAction\ThrowInNestedChildAction.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

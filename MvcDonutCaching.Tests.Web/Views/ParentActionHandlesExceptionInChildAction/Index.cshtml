@@ -1,0 +1,22 @@
+﻿        @{ Layout = "_NestedLayout.cshtml"; }
+        <div id="O::9">Index Body</div>
+
+@section Section2
+{
+    <div id="O::6">Section2</div>
+    @Html.Action("SwallowExceptions")
+@Html.Action("SwallowChildActionException")
+@Html.Action("SwallowChildViewException")
+}
+
+@section Section3
+{
+    <div id="O::8">Section3</div>
+    @Html.Action("SwallowExceptions")
+@Html.Action("SwallowChildActionException")
+@Html.Action("SwallowChildViewException")
+}
+
+@Html.Action("SwallowExceptions")
+@Html.Action("SwallowChildActionException")
+@Html.Action("SwallowChildViewException")

@@ -1,0 +1,28 @@
+﻿    @{ Layout = "_TopLayout.cshtml"; }
+
+@Html.Action("NestedLayoutHeader")    
+@RenderSection("Section2")
+<div id="O::7">NestedLayout</div>
+@RenderSection("Section3")
+    @RenderBody()
+    @Html.Action("NestedLayoutFooter")
+
+@Html.Action("SwallowExceptions")
+@Html.Action("SwallowChildActionException")
+@Html.Action("SwallowChildViewException")
+
+@section Section1
+{
+    @Html.Action("SwallowExceptions")
+    @Html.Action("SwallowChildActionException")
+    @Html.Action("SwallowChildViewException")
+    <div id="O::3">Section1</div>
+}
+
+@section Section4
+{
+    @Html.Action("SwallowExceptions")
+    @Html.Action("SwallowChildActionException")
+    @Html.Action("SwallowChildViewException")
+    <div id="O::12">Section4</div>
+}

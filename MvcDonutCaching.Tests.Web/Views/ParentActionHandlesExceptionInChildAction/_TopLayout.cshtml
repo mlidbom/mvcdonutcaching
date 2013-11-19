@@ -1,0 +1,13 @@
+﻿<html id="O::1">
+    @Html.Action("TopLayoutHeader")
+    @RenderSection("Section1")
+    <body id="O::4">
+        <div>TopLevelLayout</div>
+        @RenderBody()
+        @Html.Action("TopLayoutFooter")
+    </body>
+    @RenderSection("Section4")
+@Html.Action("SwallowExceptions")
+@Html.Action("SwallowChildActionException")
+@Html.Action("SwallowChildViewException")
+</html>

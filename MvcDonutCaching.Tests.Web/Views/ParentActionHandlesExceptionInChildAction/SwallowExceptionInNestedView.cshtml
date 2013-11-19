@@ -1,0 +1,11 @@
+﻿<div>BeforeSwallowingExceptionNestedChildView</div>
+@{
+    try
+    {
+        @Html.Action("ThrowInNestedChildView")
+    }
+    catch(Exception)
+    {
+<div>ISwallowedAnException</div>
+    }
+}<div>AfterSwallowingExceptionNestedChildView</div>
