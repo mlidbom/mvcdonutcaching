@@ -66,6 +66,19 @@ namespace DevTrends.MvcDonutCaching.Mlidbom
             Options = OutputCache.DefaultOptions;
         }
 
+        public static AutoOutputCacheAttribute CreateForTestPurposes(
+            IKeyBuilder keyBuilder = null,
+            IKeyGenerator keyGenerator = null,
+            IReadWriteOutputCacheManager outputCacheManager = null,
+            ICacheSettingsManager cacheSettingsManager = null)
+        {
+            keyBuilder = keyBuilder ?? new KeyBuilder();
+            keyGenerator = keyGenerator ?? new KeyGenerator(keyBuilder);
+            outputCacheManager = outputCacheManager ?? new OutputCacheManager(OutputCache.Instance, keyBuilder);
+            cacheSettingsManager = cacheSettingsManager ?? new CacheSettingsManager();
+            return new AutoOutputCacheAttribute(keyGenerator, outputCacheManager, cacheSettingsManager);
+        }
+
         /// <summary>Gets or sets the cache duration, in seconds.</summary>
         public double Duration { get; set; }
 
